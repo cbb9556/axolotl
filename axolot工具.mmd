@@ -1,0 +1,129 @@
+[Scia Reto](https://sciareto.org) mind map
+> __version__=`1.1`,showJumps=`true`
+---
+
+# axolot工具
+
+## 目的
+
+### 一种旨在简化各种 AI 模型微调的工具，为多种配置和架构提供支持
+
+#### 训练各种 Huggingface 模型，例如 llama、pythia、falcon、mpt
+
+#### 支持 fullfinetune、lora、qlora、relora 和 gptq
+
+### 使用简单的 yaml 文件或 CLI 覆盖自定义配置
+
+#### 见examples文件夹中的示例
+
+##### 每个 yaml文件的大致包括如下内容
+
+###### base model基础模型
+
+###### model 类型
+
+####### AutoModelForCausalLM
+
+######## qwen使用的是这个 因果推理
+
+####### LlamaForCausalLM
+
+####### MambaLMHeadModel
+
+###### tokenizer\_type分词器类型
+
+####### autoTokenizer
+
+######## Qwen使用的就是这个 自动 分词器
+
+####### LLamaTokenizer
+
+####### CodellamaTokenizer
+
+####### GPT2Tokenizer
+
+####### 还可以研究，的tokenizer
+> fillColor=`#FF0E00`
+
+
+######## cvpr 2024
+
+######### https://arxiv\.org/pdf/2403\.07874\.pdf
+
+######### V2L Tokenizer
+
+######### https://github\.com/zh460045050/V2L\-Tokenizer
+
+######## token 钓鱼
+
+######### https://arxiv\.org/abs/2405\.05417
+
+######### 自动检测LLM中训练不足的token
+
+######## 视觉分词器
+
+######### https://finance\.sina\.cn/tech/2024\-01\-30/detail\-inafhtpk0164147\.d\.html
+
+######### 24年多模态的 LAvit，实现多模态
+
+###### wandb（Weights & Biases）配置
+
+####### wandb（Weights & Biases）是一个用于机器学习模型实验跟踪、调试和共享的平台
+
+####### 用途
+
+######## 实验跟踪：
+
+######### 自动记录训练过程中的指标、超参数、模型架构等信息。
+
+######## 可视化：
+
+######### 提供图表和界面来展示训练过程中的变化，帮助分析模型性能。
+
+######## 项目协作：
+
+######### 支持团队合作，可以共享实验结果，便于团队成员之间的交流和协作。
+
+######## 模型版本管理：
+
+######### 记录不同版本的模型及其相关信息，方便回溯和部署。
+
+###### flash\_attention配置
+
+####### 参考 xformer 库
+
+######## 见 ff\-md。
+
+###### deepspeed配置
+
+####### 实战
+
+######## https://huggingface\.co/docs/accelerate/main/en/usage\_guides/deepspeed\#what\-is\-integrated
+
+####### 有哪些坑
+
+####### DeepSpeed 是目前推荐的多 GPU 选项，因为 FSDP 可能会遇到丢失不稳定的情况。
+
+#######  ZeRO 阶段 1、2 和 3 提供了几种默认的 deepspeed JSON 配置
+
+###### fsdp
+
+####### 实战
+
+####### 原理
+
+### 加载不同的数据集格式、使用自定义格式或自带标记化数据集
+
+### 与 xformer、flash attention、liger kernel、rope scaling 和 multipacking 集成
+
+### 通过 FSDP 或 Deepspeed 与单个 GPU 或多个 GPU 配合使用
+
+### 在本地或云上使用 Docker 轻松运行
+
+### 将结果和可选的检查点记录到 wandb 或 mlflow
+
+## 目标
+
+### 如何拟人
+
+### 如何像人， 微调， 技术，探索
